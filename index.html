@@ -1,242 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Arunkumar Maheshwaran | Portfolio</title>
-
-<meta name="description" content="Portfolio of Arunkumar Maheshwaran - Android Developer, Kotlin Programmer and Engineering Student">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    color:#333;
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,#2563eb,#1e3a8a);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.profile-img{
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    border:5px solid white;
-    object-fit:cover;
-    margin-bottom:20px;
-}
-
-header h1{
-    font-size:2.8rem;
-}
-
-header p{
-    font-size:1.1rem;
-    margin-top:10px;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
-
-section{
-    background:white;
-    margin:25px 0;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-h2{
-    color:#1e3a8a;
-    margin-bottom:20px;
-    border-bottom:3px solid #2563eb;
-    display:inline-block;
-    padding-bottom:5px;
-}
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-}
-
-.skill{
-    background:#2563eb;
-    color:white;
-    padding:10px 18px;
-    border-radius:25px;
-}
-
-.project{
-    margin-bottom:20px;
-}
-
-.project h3{
-    color:#2563eb;
-}
-
-.resume-btn{
-    display:inline-block;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    margin-top:15px;
-}
-
-.resume-btn:hover{
-    background:#1e3a8a;
-}
-
-.contact p{
-    margin:10px 0;
-}
-
-footer{
-    background:#1e3a8a;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:20px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>ArunKumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-
-    <!-- Upload your photo and replace profile.jpg -->
-    <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-
-    <h1>Arunkumar Maheshwaran</h1>
-
-    <p>Android Developer | Kotlin Programmer | Engineering Student</p>
-
-</header>
-
-<div class="container">
-
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am an enthusiastic engineering student passionate about
-        Android application development, software engineering,
-        and modern technologies. I enjoy building projects and
-        continuously learning new skills.
-    </p>
-</section>
-
-<section>
-    <h2>Education</h2>
-
-    <p><strong>B.E/B.Tech</strong> – Your College Name (2022 - 2026)</p>
-    <p><strong>HSC</strong> – Your School Name</p>
-    <p><strong>SSLC</strong> – Your School Name</p>
-
-</section>
-
-<section>
-    <h2>Technical Skills</h2>
-
-    <div class="skills">
-        <div class="skill">Kotlin</div>
-        <div class="skill">Java</div>
-        <div class="skill">C Programming</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">Android Studio</div>
-        <div class="skill">GitHub</div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>ArunKumar</h1>
+      <p>Web Developer | Designer | Creator</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-</section>
-
-<section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Water Intake Tracker</h3>
-        <p>
-            Developed a Kotlin application that tracks daily water
-            consumption and provides weekly summaries.
-        </p>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm ArunKumar, passionate about building clean, modern websites and applications. I love solving problems and creating digital experiences that make life easier.</p>
     </div>
+  </section>
 
-    <div class="project">
-        <h3>Calorie Calculator</h3>
-        <p>
-            Created a calorie calculator using Kotlin functions
-            and conditionals based on activity levels.
-        </p>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A short description of your project goes here.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Another project description goes here.</p>
+        <a href="#">View Project</a>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-        <h3>Location Tracking Android App</h3>
-        <p>
-            Designed an Android application for real-time
-            location tracking and battery usage analysis.
-        </p>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:arunkumar@example.com">arunkumar@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
     </div>
+  </section>
 
-</section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 ArunKumar. All rights reserved.</p>
+    </div>
+  </footer>
 
-<section>
-    <h2>Certifications</h2>
-
-    <ul>
-        <li>Android Development</li>
-        <li>Kotlin Programming</li>
-        <li>Java Programming</li>
-        <li>NPTEL Certifications</li>
-    </ul>
-
-</section>
-
-<section>
-    <h2>Resume</h2>
-
-    <!-- Upload resume.pdf to GitHub -->
-    <a href="resume.pdf" class="resume-btn" download>
-        Download Resume
-    </a>
-
-</section>
-
-<section class="contact">
-    <h2>Contact Me</h2>
-
-    <p><strong>Email:</strong> yourmail@gmail.com</p>
-
-    <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-
-    <p><strong>LinkedIn:</strong> https://linkedin.com/in/yourprofile</p>
-
-    <p><strong>GitHub:</strong> https://github.com/yourusername</p>
-
-</section>
-
-</div>
-
-<footer>
-    <p>© 2026 Arunkumar Maheshwaran | Portfolio Website</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

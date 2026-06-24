@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
@@ -7,8 +6,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-
-// Fade-in animation on scroll
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = { threshold: 0.2 };
 const appearOnScroll = new IntersectionObserver(function(entries, observer) {

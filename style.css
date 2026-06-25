@@ -1,248 +1,309 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+<title>Arun Kumar Maheshwaran | Portfolio</title>
 
-:root {
-  --accent: #a78bfa;
-  --accent-hover: #c4b5fd;
-  --accent-dim: #1a1025;
-  --accent-border: #3d2f7a;
-  --bg: #0a0a0f;
-  --bg-card: #141420;
-  --bg-nav: #0f0f1a;
-  --text: #e8e6f0;
-  --text-head: #f1effe;
-  --text-muted: #6b7280;
-  --text-soft: #d1cfea;
-  --border: rgba(255,255,255,0.09);
-  --green: #34d399;
-  --orange: #f97316;
-  --radius: 10px;
-  --radius-sm: 6px;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Space Grotesk', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* ── NAV ── */
-.navbar {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 40px; background: var(--bg-nav);
-  border-bottom: 0.5px solid var(--border);
-  position: sticky; top: 0; z-index: 100;
-}
-.logo { font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700; }
-.logo em { color: var(--accent); font-style: normal; }
-.logo::after { content: '_'; color: var(--accent); }
-.nav-links { display: flex; gap: 2px; list-style: none; }
-.nav-links a {
-  font-size: 13px; color: var(--text-muted); padding: 6px 14px;
-  border-radius: var(--radius-sm); border: 0.5px solid transparent;
-  text-decoration: none; transition: all .2s;
-}
-.nav-links a:hover { background: #1e1b2e; color: var(--accent); border-color: var(--accent-border); }
-.btn-hire {
-  font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 500;
-  padding: 7px 18px; border-radius: var(--radius-sm); background: var(--accent);
-  color: var(--bg); border: none; cursor: pointer; transition: background .2s;
-}
-.btn-hire:hover { background: var(--accent-hover); }
+<link rel="stylesheet" href="style.css">
+</head>
 
-/* ── HERO ── */
-.hero {
-  padding: 80px 40px 64px; background: var(--bg-nav);
-  border-bottom: 0.5px solid var(--border);
-  display: flex; flex-direction: column; align-items: center;
-  text-align: center; gap: 20px; position: relative; overflow: hidden;
-}
-.hero-grid {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-.avatar {
-  width: 84px; height: 84px; border-radius: 50%; background: #1e1b2e;
-  border: 2px solid var(--accent); display: flex; align-items: center;
-  justify-content: center; font-family: 'Space Mono', monospace;
-  font-size: 24px; font-weight: 700; color: var(--accent); position: relative; z-index: 1;
-}
-.availability-pill {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: var(--accent-dim); color: var(--accent); font-size: 12px;
-  font-weight: 500; padding: 5px 16px; border-radius: 99px;
-  border: 0.5px solid var(--accent-border); position: relative; z-index: 1;
-}
-.availability-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
-.hero h1 {
-  font-size: 48px; font-weight: 700; line-height: 1.1;
-  letter-spacing: -2px; color: var(--text-head); position: relative; z-index: 1;
-}
-.hero h1 em { color: var(--accent); font-style: normal; }
-.hero-sub { font-size: 15px; color: var(--text-muted); max-width: 420px; line-height: 1.75; position: relative; z-index: 1; }
-.hero-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
-.tag {
-  font-size: 12px; font-weight: 500; padding: 4px 13px;
-  border-radius: var(--radius-sm); background: #1e1b2e;
-  border: 0.5px solid var(--accent-border); color: var(--accent);
-}
-.hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
-.btn-primary {
-  background: var(--accent); color: var(--bg); padding: 12px 28px;
-  border-radius: var(--radius-sm); font-size: 15px; font-weight: 500;
-  text-decoration: none; font-family: 'Space Grotesk', sans-serif;
-  border: none; cursor: pointer; transition: background .2s;
-}
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-ghost {
-  background: transparent; color: var(--text); padding: 12px 28px;
-  border-radius: var(--radius-sm); font-size: 15px; font-weight: 500;
-  text-decoration: none; border: 0.5px solid rgba(255,255,255,0.2);
-  font-family: 'Space Grotesk', sans-serif; cursor: pointer; transition: all .2s;
-}
-.btn-ghost:hover { background: #1e1b2e; border-color: var(--accent); }
-.stats-row {
-  display: flex; border: 0.5px solid var(--border); border-radius: var(--radius);
-  overflow: hidden; position: relative; z-index: 1;
-}
-.stat { padding: 18px 28px; text-align: center; border-right: 0.5px solid var(--border); }
-.stat:last-child { border-right: none; }
-.stat .n { display: block; font-family: 'Space Mono', monospace; font-size: 24px; font-weight: 700; color: var(--accent); }
-.stat .l { display: block; font-size: 11px; color: var(--text-muted); margin-top: 3px; letter-spacing: .4px; }
+<body>
 
-/* ── SECTION LABEL ── */
-.section-label {
-  font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 10px;
-}
-h2 { font-size: 26px; font-weight: 700; color: var(--text-head); margin-bottom: 14px; }
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        Arun<span>Kumar</span>
+    </div>
 
-/* ── ABOUT ── */
-.about { padding: 64px 40px; border-bottom: 0.5px solid var(--border); background: var(--bg); }
-.about-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
-.about p { font-size: 15px; color: var(--text-muted); line-height: 1.8; }
-.skills-list { display: flex; flex-direction: column; gap: 9px; }
-.skill-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 14px; background: var(--bg-nav); border: 0.5px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-.skill-row span { font-size: 13px; font-weight: 500; color: var(--text-soft); }
-.bar { height: 4px; width: 100px; background: #1e1b2e; border-radius: 99px; overflow: hidden; }
-.fill { height: 100%; background: var(--accent); border-radius: 99px; }
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-/* ── PROJECTS ── */
-.projects { padding: 64px 40px; background: var(--bg-nav); border-bottom: 0.5px solid var(--border); }
-.section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; }
-.view-all { font-size: 13px; color: var(--accent); font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 4px; }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 860px; margin: 0 auto; }
-.card {
-  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius);
-  padding: 22px; display: flex; flex-direction: column; gap: 10px;
-  cursor: pointer; transition: border-color .2s, transform .2s;
-}
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.card-top { display: flex; justify-content: space-between; align-items: center; }
-.card-icon {
-  width: 42px; height: 42px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center; font-size: 20px;
-}
-.card-icon.purple { background: var(--accent-dim); color: var(--accent); }
-.card-icon.teal { background: #0d1f1a; color: var(--green); }
-.card-icon.coral { background: #1f0f0a; color: var(--orange); }
-.card-year {
-  font-size: 11px; font-weight: 700; padding: 3px 9px; background: var(--bg);
-  border: 0.5px solid var(--border); border-radius: 4px; color: var(--text-muted);
-  font-family: 'Space Mono', monospace;
-}
-.card h3 { font-size: 15px; font-weight: 500; color: var(--text-soft); }
-.card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.ctag {
-  font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 4px;
-  background: var(--accent-dim); color: var(--accent); border: 0.5px solid var(--accent-border);
-}
-.ctag.teal { background: #0d1f1a; color: var(--green); border-color: #0f4032; }
-.ctag.coral { background: #1f0f0a; color: var(--orange); border-color: #7a3010; }
-.card-link {
-  font-size: 12px; font-weight: 500; color: var(--accent); text-decoration: none;
-  display: inline-flex; align-items: center; gap: 4px;
-  border-top: 0.5px solid var(--border); padding-top: 12px; margin-top: 4px;
-}
+    <a href="cv.pdf" class="btn-nav" download>
+        Download CV
+    </a>
+    
+</nav>
 
-/* ── EXPERIENCE ── */
-.experience {
-  padding: 64px 40px; background: var(--bg); border-bottom: 0.5px solid var(--border);
-}
-.experience-inner { max-width: 680px; margin: 0 auto; }
-.timeline { display: flex; flex-direction: column; margin-top: 8px; }
-.t-item { display: flex; gap: 18px; padding: 20px 0; border-bottom: 0.5px solid rgba(255,255,255,0.06); }
-.t-item:last-child { border-bottom: none; }
-.t-line { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.t-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-.t-dot.purple { background: var(--accent); }
-.t-dot.teal { background: var(--green); }
-.t-dot.coral { background: var(--orange); }
-.t-bar { width: 1px; flex: 1; background: rgba(255,255,255,0.08); }
-.t-body .role { font-size: 15px; font-weight: 500; color: var(--text-soft); }
-.t-body .org { font-size: 13px; color: var(--accent); margin-top: 3px; }
-.t-body .period { font-size: 11px; color: var(--text-muted); margin-top: 3px; font-family: 'Space Mono', monospace; }
-.t-body p { font-size: 13px; color: var(--text-muted); margin-top: 10px; line-height: 1.7; }
+<!-- HERO -->
+<section class="hero">
 
-/* ── CONTACT ── */
-.contact {
-  padding: 64px 40px; background: var(--bg-nav);
-  border-bottom: 0.5px solid var(--border); text-align: center;
-}
-.contact-inner { max-width: 700px; margin: 0 auto; }
-.contact-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 32px; }
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
-.c-card {
-  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius);
-  padding: 22px; display: flex; flex-direction: column; align-items: center; gap: 8px;
-  text-decoration: none; color: var(--text); cursor: pointer; transition: border-color .2s, transform .2s;
-}
-.c-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-.c-icon {
-  width: 44px; height: 44px; border-radius: 8px; background: var(--accent-dim);
-  display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--accent);
-}
-.c-lbl { font-size: 11px; color: var(--text-muted); font-family: 'Space Mono', monospace; }
-.c-val { font-size: 13px; font-weight: 500; color: var(--text-soft); }
+    <div class="hero-glow"></div>
 
-/* ── FOOTER ── */
-footer {
-  padding: 20px 40px; display: flex; justify-content: space-between;
-  align-items: center; flex-wrap: wrap; gap: 10px; background: var(--bg);
-  border-top: 0.5px solid var(--border);
-}
-footer span { font-size: 12px; color: var(--text-muted); font-family: 'Space Mono', monospace; }
-.footer-icons { display: flex; gap: 8px; }
-.f-icon {
-  width: 32px; height: 32px; border-radius: var(--radius-sm);
-  border: 0.5px solid var(--border); display: flex; align-items: center;
-  justify-content: center; font-size: 16px; color: var(--text-muted);
-  cursor: pointer; text-decoration: none; transition: all .2s;
-}
-.f-icon:hover { background: #1e1b2e; border-color: var(--accent); color: var(--accent); }
+    <div class="avatar">
+        AK
+    </div>
 
-/* ── ANIMATIONS ── */
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+    <div class="availability">
+        ● Available for Work
+    </div>
 
-/* ── RESPONSIVE ── */
-@media (max-width: 640px) {
-  .navbar { padding: 14px 20px; }
-  .nav-links { display: none; }
-  .hero { padding: 56px 20px 44px; }
-  .hero h1 { font-size: 34px; }
-  .about-inner { grid-template-columns: 1fr; }
-  .about, .projects, .experience, .contact { padding: 48px 20px; }
-  footer { padding: 18px 20px; }
-}
+    <h1>
+        Hi, I'm Arun Kumar 👋
+        <br>
+        <span class="gradient-text">
+            Full Stack Developer
+        </span>
+    </h1>
+
+    <p class="hero-sub">
+        Passionate developer and UI/UX designer creating modern,
+        responsive and user-friendly web applications.
+    </p>
+
+    <div class="hero-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>GitHub</span>
+    </div>
+
+    <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">
+            View Projects
+        </a>
+
+        <a href="#contact" class="btn-secondary">
+            Contact Me
+        </a>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section scroll-reveal">
+
+    <h2>About Me</h2>
+
+    <p class="section-text">
+        I'm Arun Kumar Maheshwaran, a passionate Full Stack Developer
+        focused on building beautiful websites and web applications.
+
+        I enjoy creating fast, modern and user-friendly experiences
+        using the latest web technologies.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section scroll-reveal">
+
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            HTML5
+        </div>
+
+        <div class="skill-card">
+            CSS3
+        </div>
+
+        <div class="skill-card">
+            JavaScript
+        </div>
+
+        <div class="skill-card">
+            React
+        </div>
+
+        <div class="skill-card">
+            Git & GitHub
+        </div>
+
+        <div class="skill-card">
+            UI / UX Design
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section scroll-reveal">
+
+    <h2>Featured Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+
+            <div class="project-image">
+                Project 1
+            </div>
+
+            <h3>Portfolio Website</h3>
+
+            <p>
+                Personal portfolio showcasing skills,
+                projects and experience.
+            </p>
+
+            <a href="#">
+                View Project →
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-image">
+                Project 2
+            </div>
+
+            <h3>E-Commerce Website</h3>
+
+            <p>
+                Responsive shopping platform built
+                with modern web technologies.
+            </p>
+
+            <a href="#">
+                View Project →
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-image">
+                Project 3
+            </div>
+
+            <h3>Task Manager</h3>
+
+            <p>
+                Productivity application for organizing
+                daily tasks efficiently.
+            </p>
+
+            <a href="#">
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section scroll-reveal">
+
+    <h2>Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>Frontend Developer</h3>
+            <span>2024 - Present</span>
+
+            <p>
+                Developed responsive websites using
+                HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>UI/UX Designer</h3>
+            <span>2023 - 2024</span>
+
+            <p>
+                Created intuitive interfaces and
+                user-centered designs.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats-section scroll-reveal">
+
+    <div class="stat-card">
+        <h3>10+</h3>
+        <p>Projects</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>2+</h3>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>5+</h3>
+        <p>Happy Clients</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>100%</h3>
+        <p>Dedication</p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section scroll-reveal">
+
+    <h2>Contact Me</h2>
+
+    <p class="section-text">
+        Let's build something amazing together.
+    </p>
+
+    <div class="contact-grid">
+
+        <a href="mailto:arunkumarmaheshwaran@gmail.com" class="contact-card">
+            📧
+            <h3>Email</h3>
+            <p>arunkumarmaheshwaran@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/Arunkumarmaheshwaran" class="contact-card" target="_blank">
+            💻
+            <h3>GitHub</h3>
+            <p>Arunkumarmaheshwaran</p>
+        </a>
+
+        <a href="#" class="contact-card">
+            🔗
+            <h3>LinkedIn</h3>
+            <p>Your LinkedIn Profile</p>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <p>
+        © 2026 Arun Kumar Maheshwaran.
+        All Rights Reserved.
+    </p>
+
+    <a href="#">
+        Back To Top ↑
+    </a>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

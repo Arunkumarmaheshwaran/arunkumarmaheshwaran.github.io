@@ -1098,3 +1098,199 @@ a{
     }
 
 }
+/* ==========================================
+   CERTIFICATE VIEW BUTTON
+========================================== */
+
+.view-btn{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#7c3aed,#06b6d4);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.view-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(124,58,237,.35);
+}
+
+/* ==========================================
+   CERTIFICATE CARD
+========================================== */
+
+.certificate-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:280px;
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(124,58,237,.3);
+}
+
+.certificate-card i{
+    font-size:50px;
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.certificate-card h3{
+    color:var(--secondary);
+    margin-bottom:10px;
+}
+
+.certificate-card p{
+    color:var(--text);
+    flex:1;
+}
+
+/* ==========================================
+   RESEARCH CARD
+========================================== */
+
+.research-card{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.research-card h3{
+    color:var(--secondary);
+    margin-bottom:20px;
+}
+
+.research-card p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   CERTIFICATE MODAL
+========================================== */
+
+.certificate-modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.88);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:25px;
+}
+
+/* ==========================================
+   MODAL CONTENT
+========================================== */
+
+.certificate-content{
+    position:relative;
+    width:90%;
+    max-width:1100px;
+    height:85vh;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    animation:popup .4s ease;
+}
+
+/* ==========================================
+   PDF VIEWER
+========================================== */
+
+#certificateFrame{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-btn{
+    position:absolute;
+    right:18px;
+    top:18px;
+    width:45px;
+    height:45px;
+    background:#ef4444;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:28px;
+    transition:.3s;
+    z-index:1000;
+}
+
+.close-btn:hover{
+    background:#dc2626;
+    transform:rotate(90deg);
+}
+
+/* ==========================================
+   POPUP ANIMATION
+========================================== */
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .certificate-content{
+        width:98%;
+        height:80vh;
+    }
+
+    .close-btn{
+        width:38px;
+        height:38px;
+        font-size:22px;
+    }
+
+    .view-btn{
+        width:100%;
+    }
+
+}
